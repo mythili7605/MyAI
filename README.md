@@ -1,4 +1,4 @@
-# MythilAi
+# MyAi
 
 A Vite + React + TypeScript chat UI backed by a LangChain AI agent using Gemini 2.5 Flash through a local Node server.
 
