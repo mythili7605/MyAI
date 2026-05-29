@@ -600,7 +600,11 @@ if (isProduction) {
   app.use(vite.middlewares)
 }
 
-app.listen(port, () => {
-  console.log(`MythilAi is running at http://127.0.0.1:${port}`)
-  console.log(`Gemini model: ${model}`)
-})
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`MythilAi is running at http://127.0.0.1:${port}`)
+    console.log(`Gemini model: ${model}`)
+  })
+}
+
+export default app
